@@ -1,0 +1,255 @@
+# Better Auth - Full-Stack Authentication System
+
+A modern, full-stack authentication system built with [Better Auth](https://better-auth.com), Next.js, and Hono. This project demonstrates how to implement secure authentication with email/password login, user registration, and session management.
+
+## 🚀 Features
+
+- **Secure Authentication**: Built on Better Auth's battle-tested authentication system
+- **Modern Tech Stack**: Next.js 15, React 19, TypeScript, and Tailwind CSS
+- **Full-Stack**: Backend API with Hono and frontend with Next.js
+- **Database Integration**: PostgreSQL with Drizzle ORM
+- **Type Safety**: End-to-end TypeScript support
+- **Modern UI**: Beautiful, responsive interface with shadcn/ui components
+- **CORS Enabled**: Cross-origin resource sharing for development
+- **Health Checks**: Built-in health monitoring endpoints
+
+## 🏗️ Architecture
+
+```
+better-auth/
+├── backend/          # Hono API server with Better Auth
+├── frontend/         # Next.js React application
+└── readme.mdx        # This file
+```
+
+### Backend (`/backend`)
+- **Hono**: Fast, lightweight web framework
+- **Better Auth**: Authentication library with Drizzle adapter
+- **PostgreSQL**: Database with Drizzle ORM
+- **TypeScript**: Full type safety
+
+### Frontend (`/frontend`)
+- **Next.js 15**: React framework with App Router
+- **React 19**: Latest React features
+- **Tailwind CSS**: Utility-first CSS framework
+- **shadcn/ui**: Beautiful, accessible UI components
+
+## 🛠️ Prerequisites
+
+- Node.js 18+ 
+- pnpm (recommended) or npm
+- PostgreSQL database
+- Git
+
+## 📦 Installation
+
+### 1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd better-auth
+```
+
+### 2. Install dependencies
+```bash
+# Install backend dependencies
+cd backend
+pnpm install
+
+# Install frontend dependencies
+cd ../frontend
+pnpm install
+```
+
+### 3. Environment Setup
+
+Create `.env` files in both `backend/` and `frontend/` directories:
+
+**Backend (`.env`)**
+```env
+DATABASE_URL="postgresql://username:password@localhost:5432/better_auth"
+JWT_SECRET="your-super-secret-jwt-key"
+```
+
+**Frontend (`.env.local`)**
+```env
+NEXT_PUBLIC_API_URL="http://localhost:3000"
+```
+
+### 4. Database Setup
+
+```bash
+cd backend
+
+# Generate database migrations
+pnpm db:generate
+
+# Push schema to database
+pnpm db:push
+
+# Or run migrations
+pnpm db:migrate
+
+# Optional: Open Drizzle Studio
+pnpm db:studio
+```
+
+## 🚀 Running the Application
+
+### Development Mode
+
+**Terminal 1 - Backend**
+```bash
+cd backend
+pnpm dev
+```
+Backend will run on `http://localhost:3000`
+
+**Terminal 2 - Frontend**
+```bash
+cd frontend
+pnpm dev
+```
+Frontend will run on `http://localhost:3001`
+
+### Production Build
+
+```bash
+# Backend
+cd backend
+pnpm build
+pnpm start
+
+# Frontend
+cd frontend
+pnpm build
+pnpm start
+```
+
+## 🔐 Authentication Endpoints
+
+The backend provides the following authentication endpoints:
+
+- `POST /api/register` - User registration
+- `GET/POST /api/auth/*` - Better Auth routes (login, logout, etc.)
+- `GET /health` - Health check endpoint
+
+### Example Usage
+
+**Register a new user:**
+```bash
+curl -X POST http://localhost:3000/api/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "securepassword123"
+  }'
+```
+
+## 🎨 Frontend Components
+
+The frontend includes several reusable components:
+
+- **Login Form**: Authentication form with validation
+- **UI Components**: Button, Input, Form, Label components from shadcn/ui
+- **Responsive Layout**: Mobile-first design with Tailwind CSS
+
+## 🗄️ Database Schema
+
+The project uses Drizzle ORM with PostgreSQL. Key tables include:
+
+- `users` - User accounts and profiles
+- `sessions` - User sessions and authentication
+- `verification_tokens` - Email verification tokens
+
+## 🔧 Development Scripts
+
+### Backend Scripts
+```bash
+pnpm dev          # Start development server
+pnpm build        # Build for production
+pnpm start        # Start production server
+pnpm db:generate  # Generate database migrations
+pnpm db:migrate   # Run database migrations
+pnpm db:push      # Push schema to database
+pnpm db:studio    # Open Drizzle Studio
+```
+
+### Frontend Scripts
+```bash
+pnpm dev          # Start development server
+pnpm build        # Build for production
+pnpm start        # Start production server
+pnpm lint         # Run ESLint
+```
+
+## 🧪 Testing
+
+```bash
+# Backend tests (when implemented)
+cd backend
+pnpm test
+
+# Frontend tests (when implemented)
+cd frontend
+pnpm test
+```
+
+## 📚 API Documentation
+
+The backend includes OpenAPI documentation through Better Auth's OpenAPI plugin. Access it at:
+
+- **Swagger UI**: `http://localhost:3000/api/auth/docs`
+- **OpenAPI JSON**: `http://localhost:3000/api/auth/openapi.json`
+
+## 🔒 Security Features
+
+- **JWT-based authentication**
+- **Password hashing** (handled by Better Auth)
+- **Session management**
+- **CORS protection**
+- **Input validation** with Zod schemas
+
+## 🚀 Deployment
+
+### Backend Deployment
+1. Set environment variables
+2. Build the application: `pnpm build`
+3. Deploy to your preferred hosting service (Vercel, Railway, etc.)
+
+### Frontend Deployment
+1. Set `NEXT_PUBLIC_API_URL` to your backend URL
+2. Build: `pnpm build`
+3. Deploy to Vercel, Netlify, or your preferred platform
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Better Auth](https://better-auth.com) - Authentication library
+- [Hono](https://hono.dev) - Web framework
+- [Next.js](https://nextjs.org) - React framework
+- [Drizzle ORM](https://orm.drizzle.team) - TypeScript ORM
+- [shadcn/ui](https://ui.shadcn.com) - UI components
+
+## 📞 Support
+
+If you encounter any issues or have questions:
+
+1. Check the [Better Auth documentation](https://better-auth.com/docs)
+2. Review the [Next.js documentation](https://nextjs.org/docs)
+3. Open an issue in this repository
+
+---
+
+**Happy coding! 🎉**
