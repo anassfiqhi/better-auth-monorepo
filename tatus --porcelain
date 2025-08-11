@@ -213,4 +213,49 @@
 [32m+[m[32m- **JWT-based authentication**[m
 [32m+[m[32m- **Password hashing** (handled by Better Auth)[m
 [32m+[m[32m- **Session management**[m
-[
+[32m+[m[32m- **CORS protection**[m
+[32m+[m[32m- **Input validation** with Zod schemas[m
+[32m+[m
+[32m+[m[32m## 🚀 Deployment[m
+[32m+[m
+[32m+[m[32m### Backend Deployment[m
+[32m+[m[32m1. Set environment variables[m
+[32m+[m[32m2. Build the application: `pnpm build`[m
+[32m+[m[32m3. Deploy to your preferred hosting service (Vercel, Railway, etc.)[m
+[32m+[m
+[32m+[m[32m### Frontend Deployment[m
+[32m+[m[32m1. Set `NEXT_PUBLIC_API_URL` to your backend URL[m
+[32m+[m[32m2. Build: `pnpm build`[m
+[32m+[m[32m3. Deploy to Vercel, Netlify, or your preferred platform[m
+[32m+[m
+[32m+[m[32m## 🤝 Contributing[m
+[32m+[m
+[32m+[m[32m1. Fork the repository[m
+[32m+[m[32m2. Create a feature branch: `git checkout -b feature/amazing-feature`[m
+[32m+[m[32m3. Commit your changes: `git commit -m 'Add amazing feature'`[m
+[32m+[m[32m4. Push to the branch: `git push origin feature/amazing-feature`[m
+[32m+[m[32m5. Open a Pull Request[m
+[32m+[m
+[32m+[m[32m## 📄 License[m
+[32m+[m
+[32m+[m[32mThis project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.[m
+[32m+[m
+[32m+[m[32m## 🙏 Acknowledgments[m
+[32m+[m
+[32m+[m[32m- [Better Auth](https://better-auth.com) - Authentication library[m
+[32m+[m[32m- [Hono](https://hono.dev) - Web framework[m
+[32m+[m[32m- [Next.js](https://nextjs.org) - React framework[m
+[32m+[m[32m- [Drizzle ORM](https://orm.drizzle.team) - TypeScript ORM[m
+[32m+[m[32m- [shadcn/ui](https://ui.shadcn.com) - UI components[m
+[32m+[m
+[32m+[m[32m## 📞 Support[m
+[32m+[m
+[32m+[m[32mIf you encounter any issues or have questions:[m
+[32m+[m
+[32m+[m[32m1. Check the [Better Auth documentation](https://better-auth.com/docs)[m
+[32m+[m[32m2. Review the [Next.js documentation](https://nextjs.org/docs)[m
+[32m+[m[32m3. Open an issue in this repository[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m**Happy coding! 🎉**[m
