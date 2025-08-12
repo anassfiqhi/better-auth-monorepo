@@ -1,0 +1,258 @@
+# Personal Portfolio & Blog Site
+
+A modern, responsive personal portfolio and blog website built with Next.js 15, TypeScript, and Tailwind CSS v4.
+
+## Features
+
+### 🎨 **Modern Design**
+- Clean, professional design with dark/light mode support
+- Responsive layout that works on all devices
+- Smooth animations and transitions
+- Custom CSS variables for consistent theming
+
+### 🚀 **Performance & SEO**
+- Built with Next.js 15 App Router for optimal performance
+- Server-side rendering for better SEO
+- Optimized images with Next.js Image component
+- Semantic HTML structure for accessibility
+
+### 🌙 **Theme System**
+- Light/dark mode toggle with system preference detection
+- Theme persistence using localStorage
+- Smooth theme transitions
+- CSS custom properties for dynamic theming
+
+### 📱 **Responsive Components**
+- Sticky header with scroll effects
+- Hero section with avatar and social links
+- Photo rail with rotated images
+- Articles grid with filtering
+- Newsletter subscription form
+- Work experience timeline
+- Comprehensive footer
+
+### 📄 **Page Structure**
+- **Homepage** (`/`) - Main portfolio with all sections
+- **About** (`/about`) - Personal information and skills
+- **Articles** (`/articles`) - Blog posts listing with search/filter
+- **Article Detail** (`/articles/[slug]`) - Individual blog post pages
+- **Projects** (`/projects`) - Portfolio projects showcase
+- **Speaking** (`/speaking`) - Speaking engagements and events
+- **Uses** (`/uses`) - Tools, software, and hardware I use
+- **Thank You** (`/thank-you`) - Newsletter subscription confirmation
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Icons**: Lucide React
+- **Fonts**: Geist Sans & Geist Mono (Google Fonts)
+- **Deployment**: Vercel-ready
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- pnpm (recommended) or npm
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd frontend
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pnpm install
+   # or
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   pnpm dev
+   # or
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Build for Production
+
+```bash
+pnpm build
+pnpm start
+```
+
+## Customization
+
+### Personal Information
+
+Update the following files with your information:
+
+- **`app/layout.tsx`** - Site metadata, title, description
+- **`components/Hero.tsx`** - Name, description, social links
+- **`components/Header.tsx`** - Navigation links
+- **`components/Footer.tsx`** - Contact information
+
+### Content Updates
+
+- **Articles**: Edit `app/articles/page.tsx` and `app/articles/[slug]/page.tsx`
+- **Projects**: Update `app/projects/page.tsx`
+- **Speaking**: Modify `app/speaking/page.tsx`
+- **Work Experience**: Edit `components/WorkTimeline.tsx`
+- **Uses**: Update `app/uses/page.tsx`
+
+### Images
+
+Replace placeholder images in the `public/` directory:
+
+- `avatar.jpg` - Your profile picture (128x128px or larger)
+- `photo1.jpg` through `photo6.jpg` - Photo rail images (square aspect ratio)
+- `project1.jpg` through `project4.jpg` - Project screenshots (16:9 aspect ratio)
+
+### Styling
+
+- **Colors**: Modify CSS custom properties in `app/globals.css`
+- **Layout**: Adjust Tailwind classes in component files
+- **Typography**: Update font variables in `app/layout.tsx`
+
+### Social Links
+
+Update social media links in:
+- `components/Hero.tsx` - Hero section social icons
+- `components/Footer.tsx` - Footer social links
+
+## Project Structure
+
+```
+frontend/
+├── app/                          # Next.js App Router pages
+│   ├── about/                    # About page
+│   ├── articles/                 # Articles listing and detail pages
+│   ├── projects/                 # Projects showcase
+│   ├── speaking/                 # Speaking engagements
+│   ├── uses/                     # Tools and software I use
+│   ├── thank-you/                # Newsletter confirmation
+│   ├── globals.css               # Global styles and CSS variables
+│   ├── layout.tsx                # Root layout with metadata
+│   └── page.tsx                  # Homepage
+├── components/                    # React components
+│   ├── Header.tsx                # Navigation header
+│   ├── Hero.tsx                  # Hero section
+│   ├── PhotoRail.tsx             # Photo gallery
+│   ├── ArticlesList.tsx          # Articles grid
+│   ├── NewsletterForm.tsx        # Newsletter subscription
+│   ├── WorkTimeline.tsx          # Work experience timeline
+│   ├── Footer.tsx                # Site footer
+│   ├── ThemeToggle.tsx           # Dark/light mode toggle
+│   └── ui/                       # Reusable UI components
+├── public/                        # Static assets
+│   ├── avatar.jpg                # Profile picture
+│   ├── photo1.jpg - photo6.jpg   # Photo rail images
+│   └── project1.jpg - project4.jpg # Project images
+└── package.json                   # Dependencies and scripts
+```
+
+## Features in Detail
+
+### Theme Toggle
+- Three modes: Light, Dark, System
+- Persists user preference in localStorage
+- Respects system preference when set to "System"
+- Smooth transitions between themes
+
+### Sticky Header
+- Transparent background when at top
+- Solid background with backdrop blur when scrolled
+- Smooth transitions and animations
+- Responsive navigation menu
+
+### Newsletter Form
+- Email validation
+- Form submission handling
+- Redirects to thank-you page
+- Accessible form controls
+
+### Photo Rail
+- Grid layout with rotated images
+- Hover effects and animations
+- Responsive design
+- Optimized image loading
+
+### Articles System
+- Grid layout with cards
+- Category filtering
+- Search functionality
+- Individual article pages
+- SEO-optimized metadata
+
+## Deployment
+
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy automatically on push
+
+### Other Platforms
+- **Netlify**: Use `npm run build` and deploy the `out` directory
+- **AWS S3**: Build and upload static files
+- **Custom Server**: Use `npm run build` and serve the `out` directory
+
+## Performance Optimization
+
+- **Images**: Next.js Image component with optimization
+- **Fonts**: Google Fonts with display=swap
+- **CSS**: Tailwind CSS with purging
+- **JavaScript**: Code splitting and lazy loading
+- **SEO**: Meta tags and structured data
+
+## Accessibility
+
+- Semantic HTML structure
+- ARIA labels and attributes
+- Keyboard navigation support
+- Screen reader compatibility
+- High contrast mode support
+- Focus management
+
+## Browser Support
+
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Support
+
+If you have questions or need help:
+- Open an issue on GitHub
+- Check the documentation
+- Review the code examples
+
+## Acknowledgments
+
+- Built with [Next.js](https://nextjs.org/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Icons from [Lucide](https://lucide.dev/)
+- Fonts from [Google Fonts](https://fonts.google.com/)
+
+---
+
+**Happy coding! 🚀**
